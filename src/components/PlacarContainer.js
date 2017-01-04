@@ -43,6 +43,7 @@ export default class PlacarContainer extends React.Component{
                     marcarGol={this.marcarGolCasa.bind(this)}/>
             </div>
             <div style={estilo} >
+              
               <Partida {...partida}/>
             </div>
             <div style={estilo} >
@@ -51,6 +52,10 @@ export default class PlacarContainer extends React.Component{
                      gols={this.state.golsVisitante}
                      marcarGol={this.marcarGolVisitante.bind(this)}/>
             </div>
+            <div>
+                <h1>Clima</h1>
+                <spam>{this.props.clima}</spam>
+            </div>
             <div style={{clear:"both"}}></div>
         </div>
 
@@ -58,3 +63,15 @@ export default class PlacarContainer extends React.Component{
   }
 
 }
+
+PlacarContainer.propTypes = {
+
+    clima: React.PropTypes.string,
+    tempo: React.PropTypes.number.isRequired,
+
+
+};
+
+PlacarContainer.defaultProps = {
+  clima: 'Chuvoso',
+};

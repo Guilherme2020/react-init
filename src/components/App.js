@@ -21,7 +21,7 @@ import PlacarContainer from './PlacarContainer';
   export default  class App extends React.Component {
 
       render(){
-          return <PlacarContainer {...dados}/>;
+          return <PlacarContainer {...dados} clima={'Ameno'}  tempo={90}/>;
 
 
       }
